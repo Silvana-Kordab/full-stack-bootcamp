@@ -80,11 +80,16 @@ const doubleQuote =
   console.log("backtick:", backtick);
   console.log("singleQuote:", singleQuote);
   console.log("doubleQuote:", doubleQuote);
-  //note i corrcted the way of each declaration 
+  //note i corrcted the way of each declaration
 
+// Declare two string variables
+var string1 = "Silvana ";
+var string2 = "Celena";
 
+// Concatenate the values of the first two variables and store the result in a new variable
+var result = string1 + string2;
 
-
+console.log("Result:", result); // "Silvana Celena "
 
 
 
