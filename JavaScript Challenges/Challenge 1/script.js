@@ -91,7 +91,24 @@ var result = string1 + string2;
 
 console.log("Result:", result); // "Silvana Celena "
 
+var num = 5;
+var str = "5";
+var bool = true;
 
+console.log(num === str); 
+console.log(num !== str);
+console.log(num == str); 
+console.log(num != str); 
+
+console.log(num > str);   
+console.log(num >= str);  
+console.log(num < str);   
+console.log(num <= str);  
+
+console.log(num === bool); 
+console.log(num !== bool); 
+console.log(num == bool);  
+console.log(num != bool); 
 
 
 
