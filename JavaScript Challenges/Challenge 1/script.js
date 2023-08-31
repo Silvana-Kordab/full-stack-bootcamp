@@ -64,8 +64,23 @@ console.log("Type of objectVar:", typeof object, "Value:", object);
 console.log("Type of arrayVar:", typeof array, "Value:", array);
 console.log("Type of nullVar:", typeof nullv, "Value:", nullv);
 
+// Declare a variable myText and assign a string value to it.
+var myText = "Hello, ,my name is Silvana!";
+
+// Use three different ways to declare strings: double quotations, single quotations, and backticks.
+const counter = 3;
+const backtick = `This is my text using backticks ${counter} times`;
+const singleQuote =
+  'This is my text using single quotations "' + counter + '" times';
+const doubleQuote =
+  "This is my text using double quotations  \"" + counter + "\" times";
 
 
+  console.log("myText:", myText);
+  console.log("backtick:", backtick);
+  console.log("singleQuote:", singleQuote);
+  console.log("doubleQuote:", doubleQuote);
+  //note i corrcted the way of each declaration 
 
 
 
