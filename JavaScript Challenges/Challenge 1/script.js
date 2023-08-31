@@ -99,17 +99,22 @@ console.log(num === str);
 console.log(num !== str);
 console.log(num == str); 
 console.log(num != str); 
-
 console.log(num > str);   
 console.log(num >= str);  
 console.log(num < str);   
 console.log(num <= str);  
-
 console.log(num === bool); 
 console.log(num !== bool); 
 console.log(num == bool);  
 console.log(num != bool); 
 
+
+var result0 = 5 + 3 * 2; 
+var result1 = 10 / 2 + 3; 
+var result2 = 10 / (2 + 3); 
+console.log("result0:", result0); 
+console.log("result1:", result1); 
+console.log("result2:", result2); 
 
 
 
