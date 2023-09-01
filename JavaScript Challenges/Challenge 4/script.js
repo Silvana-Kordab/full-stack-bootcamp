@@ -31,3 +31,48 @@ console.log(thirdNum);
 // console.log(name);    
 //  console.log(location);   
 //  console.log(nationality);
+
+const personal = {
+    name: "sisi",
+    contactInfo: {
+      email: "silvanakordab16@gmail.com",
+      phone: "76082232"
+    }
+  };
+  
+  
+  const { name, contactInfo: { email, phone } } = personal;
+  
+  console.log(name);    
+  console.log(email);   
+  console.log(phone);   
+
+  const [first, second, ...restOfNumbers] = fiveNumbers;
+
+  console.log(first);         
+  console.log(second);       
+  console.log(restOfNumbers); 
+
+  const obj = {
+    name: "celena",
+    age: 7,
+    location: "Lebanon"
+  };
+  
+  const OBJ = {
+    age: 20,
+    occupation: "full Stack"
+  };
+  
+  
+  const mergedObject = { ...obj, ...OBJ };
+  
+  console.log(mergedObject);
+  
+
+
+
+
+
+
+
