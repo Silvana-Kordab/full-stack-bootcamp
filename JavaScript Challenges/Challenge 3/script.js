@@ -118,9 +118,23 @@ do {
 } while (num <= 10);
 
 
+function processArray(arr, func) {
+    const result = [];
+    for (let i = 0; i < arr.length; i++) {
+      result.push(func(arr[i]));
+    }
+    return result;
+  }
+  
 
-
-
+  function multiplier(factor) {
+    return function (number) {
+      return factor * number;
+    };
+  }
+  
+  
+  
 
 
 
