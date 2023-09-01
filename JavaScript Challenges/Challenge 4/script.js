@@ -18,3 +18,16 @@ const additionalInfo ={
 }
 const fullInfo = { ...personalInfo, ...additionalInfo };
 console.log(fullInfo);
+
+
+const [firstNum, secondNum, thirdNum] = fiveNumbers;
+
+console.log(firstNum);  
+console.log(secondNum); 
+console.log(thirdNum);  
+
+//  const { name, location, nationality } = personalInfo;
+
+// console.log(name);    
+//  console.log(location);   
+//  console.log(nationality);
