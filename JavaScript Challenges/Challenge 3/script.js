@@ -97,7 +97,42 @@ const squareNumber = (number) => {
   const localVar = "local scope";
   return number * number;
 };
-console.log("Outside squareNumber function:", localVar);//3tani error
+//console.log("Outside squareNumber function:", localVar);//3tani error
+
+for (let i = 1; i <= 10; i++) {
+    console.log(i);
+  }
+
+  let counter = 10;
+while (counter >= 1) {
+  console.log(counter);
+  counter--;
+}
+
+let num = 1;
+do {
+  if (num % 2 === 0) {
+    console.log(num);
+  }
+  num++;
+} while (num <= 10);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
