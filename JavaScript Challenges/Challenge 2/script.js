@@ -19,3 +19,26 @@ console.log("Expression 1:", expression1);
 console.log("Expression 2:", expression2);
 console.log("Expression 3:", expression3);
 console.log("Expression 4:", expression4);
+
+const ageDri = 25;
+const hasDriverLicense = true;
+const hasCar = false;
+
+let canDrive = false;
+if (ageDri >= 18 && hasDriverLicense) {
+  canDrive = true;
+}
+
+let canRentCar = false;
+if (ageDri >= 22 && hasDriverLicense && !hasCar) {
+  canRentCar = true;
+}
+
+let needDriver = false;
+if (ageDri < 18 && !hasDriverLicense && !hasCar) {
+  needDriver = true;
+}
+
+console.log("canDrive:", canDrive);
+console.log("canRentCar:", canRentCar);
+console.log("needDriver:", needDriver);
