@@ -77,4 +77,47 @@ function compute(num1, num2, operation) {
   console.log(compute(10, 2, "divide")); 
   console.log(compute(5, 0, "divide")); 
   console.log(compute(5, 3, "power")); 
+
+//   Step 2: Arrow Functions and Scopes
+//   Arrow Function
+//   Declare an arrow function named squareNumber that takes in one parameter: number. This function should return the square of this number.
+  
+//   const squareNumber = (number) => number * number;
+//   Understanding Scopes
+//   Global Scope: Declare a variable globalVar outside any function and assign a value to it. Inside the squareNumber function, 
+//try to log the value of globalVar to understand global scope.
+//   Local Scope: Inside the squareNumber function, declare a variable localVar and assign a value. Outside the function, try to log localVar to understand the concept of local scope and see the error it produces.
+//   Commit: "Challenge 3 - Done with step 2".
+
+const squareNumber1 = (number) => number * number;
+const globalVar = "Global";
+
+console.log("Inside squareNumber function:", globalVar);
+const squareNumber = (number) => {
+  const localVar = "local scope";
+  return number * number;
+};
+console.log("Outside squareNumber function:", localVar);//3tani error
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
