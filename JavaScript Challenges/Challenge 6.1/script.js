@@ -45,4 +45,23 @@ function delay(milliseconds) {
   }
   
   fetchRandomFact();
+  const imageUrls = [
+    "https://dog.ceo/api/breeds/image/random",
+    "https://dog.ceo/api/breeds/image/random",
+    "https://dog.ceo/api/breeds/image/random"
+  ];
+  
+  const fetchPromises = imageUrls.map((url) => fetch(url));
+  
+  Promise.all(fetchPromises)
+    .then((responses) => {
+      const imagePromises = responses.map((response) => response.json());
+      return Promise.all(imagePromises);
+    })
+    .then((images) => {
+      console.log("Fetched Dog Images:", images);
+    })
+    .catch((error) => {
+      console.error("Error:", error.message);
+    });
   
