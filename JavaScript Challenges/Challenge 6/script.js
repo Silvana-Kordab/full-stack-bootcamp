@@ -66,3 +66,45 @@ setTimeout(function () {
       fetchPost();
       
   
+      async function fetchMultiplePosts() {
+        const postIds = [1, 2, 3];
+        const fetchPromises = postIds.map((postId) =>
+          fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
+        );
+      
+        try {
+          const responses = await Promise.all(fetchPromises);
+          const dataPromises = responses.map((response) => response.json());
+          const postData = await Promise.all(dataPromises);
+      
+          console.log("Combined Data:", postData);
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      }
+     
+      fetchMultiplePosts();
+      
+      async function fetchSequentialPosts() {
+        const postIds = [4, 5, 6, 7, 8];
+        const postData = [];
+      
+        for (const postId of postIds) {
+          try {
+            const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`);
+            if (!response.ok) {
+              throw new Error(`Failed to fetch post ${postId}`);
+            }
+            const data = await response.json();
+            postData.push(data);
+            console.log(`Fetched post ${postId}:`, data);
+          } catch (error) {
+            console.error(error.message);
+          }
+        }
+      
+        console.log("Sequentially Processed Data:", postData);
+      }
+      
+     
+      fetchSequentialPosts();
