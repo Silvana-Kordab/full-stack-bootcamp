@@ -15,3 +15,16 @@ function delay(milliseconds) {
       console.error("Error:", error);
     });
   
+    fetch("https://uselessfacts.jsph.pl/random.json?language=en")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok.");
+    }
+    return response.json();
+  })
+  .then((data) => {
+    console.log("Random Fact:", data.text);
+  })
+  .catch((error) => {
+    console.error("Error:", error.message);
+  });
