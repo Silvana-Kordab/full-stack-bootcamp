@@ -26,3 +26,45 @@ const heading3 = document.querySelector('footer h3');
 heading1.style.fontStyle = 'italic';
 heading3.style.fontStyle = 'italic';
 document.body.appendChild(containerDiv);
+
+const colorChangeButton = document.createElement('button');
+colorChangeButton.textContent = 'Hover Me';
+
+colorChangeButton.addEventListener('mouseover', function () {
+  colorChangeButton.style.backgroundColor = 'red';
+});
+
+colorChangeButton.addEventListener('mouseout', function () {
+  colorChangeButton.style.backgroundColor = ''; 
+});
+
+document.body.appendChild(colorChangeButton);
+
+const buttonContainer = document.getElementById('buttonContainer');
+buttonContainer.addEventListener('click', function (event) {
+  if (event.target.tagName === 'BUTTON') {
+    console.log('Clicked Button:', event.target.textContent);
+  }
+});
+
+const form = document.createElement('form');
+const nameInput = document.createElement('input');
+const emailInput = document.createElement('input');
+const submitButton = document.createElement('button');
+
+nameInput.placeholder = 'Name';
+emailInput.placeholder = 'Email';
+submitButton.textContent = 'Submit';
+
+form.appendChild(nameInput);
+form.appendChild(emailInput);
+form.appendChild(submitButton);
+
+form.addEventListener('submit', function (event) {
+  event.preventDefault(); 
+  const formData = new FormData(form);
+  console.log('Form Data:', Object.fromEntries(formData.entries()));
+});
+
+document.body.appendChild(form);
+
