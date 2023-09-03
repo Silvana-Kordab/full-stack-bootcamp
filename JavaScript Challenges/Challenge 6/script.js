@@ -21,11 +21,48 @@ setTimeout(function () {
   
   delayedPromise
   .then((message) => {
-    alert(message); // Shows an alert with "Promise resolved!"
+    alert(message);
     return "Chained message!";
   })
   .then((chainedMessage) => {
-    console.log(chainedMessage); // Logs "Chained message!"
+    console.log(chainedMessage); 
   });
 
+  function simulateNetworkRequest() {
+    return new Promise((resolve, reject) => {
+      
+      setTimeout(() => {
+        const randomSuccess = Math.random() < 0.5; 
+        if (randomSuccess) {
+          resolve("Data fetched successfully!");
+        } else {
+          reject("Network Error!");
+        }
+      }, 3000); 
+    });
+  }
+
+  simulateNetworkRequest()
+    .then((message) => {
+      console.log("Success:", message);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+
+    async function fetchPost() {
+        try {
+          const response = await fetch("https://jsonplaceholder.typicode.com/posts/1");
+          if (!response.ok) {
+            throw new Error("Network response was not ok.");
+          }
+          const data = await response.json();
+          console.log("Fetched post:", data);
+        } catch (error) {
+          console.error("Error:", error.message);
+        }
+      }
+      
+      fetchPost();
+      
   
